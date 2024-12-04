@@ -1,0 +1,767 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/*------navbar section starts-------------*/
+nav{
+    height: 80px;
+    background-color: black;
+}
+
+
+nav img {
+   margin: 5px;
+   height: auto;
+   width: 150px;
+   margin-top: 15px;
+}
+
+.login-buttons {
+    float: inline-end;
+}
+
+.button1 {
+    color: white;
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 4px;
+    background-color: transparent;
+    margin-right: 10px;
+    transition: all 0.4s linear;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.button1:hover{
+    background-color: rgb(0, 255, 255);
+    color: black;
+}
+
+.button2 {
+    color: black;
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 4px;
+    background-color: rgb(0, 255, 255);
+    transition: all 0.4s linear;
+    margin-top: 20px;
+}
+
+.button2:hover {
+    background-color: transparent;
+    color: white;
+}
+
+nav ul {
+    float: right;
+    align-items: center;
+    margin-top: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 2px;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: aqua;
+    transform: scaleX(0);
+    transition: all .4s linear;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#btn, #cancel {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 40px;
+    margin-right: 10px;
+    display: none;
+    color: white;
+}
+
+
+
+.active {
+    all: unset;
+    padding: 14px 22px;
+    border-radius: 4px;
+    background-color: rgb(0, 255, 255);
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+  }
+
+  .active:hover {
+    color: black;
+  }
+  
+  
+  #check{
+    display: none;
+  }
+  
+  @media (max-width: 1118px) {
+    nav img{
+      left: 3%;
+    }
+
+    .nav ul {
+      margin-right: 75px;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    nav ul li a{
+        font-size: 12px;
+      }
+    
+     .button1 {
+        margin-right: 50px;
+     } 
+  }
+  
+  @media (max-width: 945px) {
+    nav img{
+      left: 2%;
+      top: 15px;
+     
+    }
+
+    nav ul{
+        margin-right: 75px;
+    }
+  
+    nav ul li a{
+      font-size: 14px;
+    }
+
+    .button1 {
+        margin-right: 70px;
+     }
+  }
+  
+  
+  @media (max-width: 945px) {
+    #btn{
+      display: block;
+    }
+    
+  
+    ul{
+      position: fixed;
+      width: 70%;
+      height: 100vh;
+      background: whitesmoke;
+      top: 50px;
+      right: -300%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 2;
+    }
+  
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a{
+      font-size: 20px;
+      padding: 20px 16px;
+      color: black;
+      transition: all 0.4s linear;
+    }
+
+    nav ul li a:hover {
+      color: black;
+    }
+  
+    .active {
+      all: unset;
+      padding: 20px 80px;
+      background-color: rgb(0, 255, 255);
+      text-transform: uppercase;
+      font-size: 18px;
+      cursor: pointer;
+      color: black;
+    }
+  
+    #check:checked ~ ul{
+      right: -80px;
+    }
+  
+    #check:checked ~ label #btn{
+      display: none;
+    }
+  
+    #check:checked ~ label #cancel{
+      display: block;
+    }
+  
+  }
+
+  @media (max-width: 486px) {
+    .button1 {
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: 3px;
+      margin-right: 60px;
+      margin-top: 24px;
+  }
+  
+  
+  .button2 {
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: 3px;
+      margin-top: 24px;
+  }
+
+  nav img {
+    margin: 5px;
+    height: auto;
+    width: 110px;
+    margin-top: 25px;
+ }
+
+}
+
+@media (max-width: 320px) {
+  .button1 {
+    padding: 1px 3px;
+    margin-right: 60px;
+  }
+
+  .button2 {
+    padding: 1px 3px;
+    margin: 3px;
+    margin-top: 25px;
+  }
+  nav img  {
+    width: 100px;
+  }
+
+  .active {
+    padding: 20px 60px;
+  }
+}
+
+@media (max-width: 319px) {
+  .button1 {
+    display: none;
+  }
+
+  .button2 {
+    display: none;
+  }
+}
+
+
+
+
+/*------navbar section ends-------------*/
+
+/*------banner section starts-------------*/
+  .banner-section {
+    background-image: radial-gradient(#dbfffa, rgba(139, 201, 201, 0.37));
+    margin-top: 80px;
+  }
+
+  .banner-section-content {
+    margin-top: 80px;
+  }
+
+  .banner-section-content p {
+    font-size: 20px;
+    color: black;
+    font-family: "Acme", sans-serif;
+  }
+
+  .banner-section-content h4 {
+    font-size: 48px;
+    color: black;
+    margin-bottom: 20px;
+    font-family: "Abril Fatface", serif;
+  }
+  
+  .banner-section-content button {
+    color: black;
+    border: 1px solid rgb(0, 255, 255);
+    background-color: rgb(0, 255, 255);
+    padding: 8px 16px;
+    margin: auto;
+    margin-bottom: 70px;
+    transition: all 0.4s linear;
+    margin-top: 20px;
+  }
+
+  .banner-section-content button:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+  }
+
+  .banner-image img {
+    height: 500px;
+    width: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .banner-section-content h4 {
+      font-size: 38px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .banner-section-content {
+      margin-top: 20px;
+    }
+
+    .banner-section-content h4 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: none;
+    }
+
+    .banner-section-content p {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .banner-button {
+      text-align: center;
+    }
+    
+    .banner-section-content button {
+      margin-bottom: 15px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+
+    .banner-image {
+      text-align: center;
+    }
+
+    .banner-image img {
+      height: 250px;
+    }
+  }
+
+
+
+
+ 
+
+/*------banner section ends-------------*/
+
+/*------course section starts-------------*/
+
+
+
+.course-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0 10px 0 black;
+  border: 1px solid black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: all 0.4s linear;
+}
+
+.course-card:hover{
+  box-shadow: 0 0 30px 0 #dbfffa;
+}
+
+.course-section-heading {
+  font-family: "Abril Fatface", serif;
+  font-size: 32px;
+  color: black;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.course-card-image img {
+  height: 150px;
+  width: auto;
+}
+
+.course-card-description h5 {
+  font-size: 20px;
+  color: black;
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.course-card-description p {
+  font-size: 14px;
+  color: black;
+  font-family: initial;
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .course-card-image img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .course-card-description p {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 786px) {
+  .course-card {
+    margin-top: 20px;
+  }
+
+  .course-card-description h5 {
+    font-size: 16px;
+  }
+
+  .course-card-description p {
+    font-size: 14px;
+  }
+
+  .course-card-image img {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 468px) {
+  .course-card-description h5 {
+    font-size: 20px;
+  }
+
+  .course-card-description p {
+    font-size: 16px;
+  }
+}
+/*------course section ends-------------*/
+
+/*------visual design section starts-------------*/
+
+.visual-design-container {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.visual-design-description {
+  margin-top: 50px;
+}
+
+.visual-design-description h1 {
+  font-size: 40px;
+  color: black;
+  font-family: "Abril Fatface", serif;
+}
+
+.visual-design-description p{
+  color: black;
+  font-family: initial;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.visual-design-description button {
+  color: black;
+  background-color: rgb(0, 255, 255);
+  border-radius: 14px;
+  border: 1px solid rgb(0, 255, 255);
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+  transition: all 0.4s;
+}
+
+.visual-design-description button:hover {
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.visual-design-image {
+  text-align: center;
+}
+
+.visual-design-image img {
+  width: 350px;
+  height: auto;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+
+  .visual-design-description h1 {
+    font-size: 32px;
+  }
+
+  .visual-design-description {
+    margin-top: 10px;
+  }
+
+  .visual-design-image {
+    text-align: center;
+  }
+
+
+  .visual-design-image img {
+    height: 200px;
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .visual-design-description button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .visual-design-description {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .visual-design-image {
+    text-align: center;
+  }
+
+  .visual-design-image img {
+    height: 200px;
+    width: auto;
+  }
+}
+
+@media (max-width: 468px) {
+  .visual-design-image img {
+    height: 150px;
+    width: auto;
+  }
+}
+
+/*------visual design section ends-------------*/
+
+/*------feedback section starts-------------*/
+
+
+.feedback-heading {
+  font-family: "Abril Fatface", serif;
+  font-size: 32px;
+  color: black;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.feedback-description {
+  font-family: initial;
+  font-size: 16px;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonals-col {
+  flex-basis: 40%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background-color: #dbfffa;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0 0 5px 0 black;
+  transition: all 0.4s;
+}
+
+.testimonals-col:hover {
+  box-shadow: 0 0 30px 0 #dbfffa;
+}
+
+.testimonals-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.testimonals-col p {
+  padding: 0;
+  font-size: 14px;
+}
+
+.testimonals-col h4 {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.testimonals-col .fa {
+  color: #f44336;
+}
+
+@media(max-width: 700px){
+  .testimonals-col img{
+      margin-left: 8px;
+      margin-right: 15px;
+  }
+}
+
+/*------feedback section ends-------------*/
+
+/*------offer section starts-------------*/
+
+
+.offer-image img {
+  height: 400px;
+}
+
+.offer-button button {
+  border-radius: 8px;
+ }
+
+
+@media (max-width: 768px) {
+
+ .offer-image {
+   text-align: center;
+ }
+ .offer-image img {
+   height: 250px;
+ }
+  .offer-button {
+    text-align: center;
+ }
+
+}
+
+
+
+/*------offer section ends-------------*/
+
+/*--------bottom-section--starts--------*/
+
+.bottom-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bottom-heading {
+  font-size: 28px;
+  color: black;
+  font-family: "Abril Fatface", serif;
+}
+
+.bottom-description {
+  color: black;
+  font-size: 16px;
+  font-family: initial;
+}
+
+.bottom-section-icons {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom-section-icons .fa-brands {
+  font-size: 20px;
+  margin: 8px;
+  color: black;
+  transition: all 0.4s;
+}
+
+.bottom-section-icons .fa-brands:hover {
+  color: rgb(0, 255, 255);
+}
+
+.bottom-description ul li {
+  font-size: 16px;
+  font-family: initial;
+  color: black;
+}
+
+@media (max-width: 945px)  {
+  .bottom-heading {
+    font-size: 22px;
+  }
+
+  .bottom-description ol li {
+    font-size: 16px;
+    display: flex;
+  }
+
+  .bottom-section-icons .fa-brands{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 486px) {
+  .bottom-heading {
+    font-size: 16px;
+  }
+} 
+
+.last-line {
+  text-align: center;
+}
+
+.icons .fa{
+  color:#00ffdd;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.fa-heart-o{
+  color: #00ffdd;
+}
+/*--------bottom-section--ends-------*/
